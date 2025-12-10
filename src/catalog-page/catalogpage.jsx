@@ -1,86 +1,37 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import "./catalogpage.css";
-
-// the  candy product API
-export const candyProducts = [
-  {
-    id: 1,
-    name: "Gummy Bears",
-    price: "$2.50",
-    images: "/images/gumybear.jpg",
-  },
-  {
-    id: 2,
-    name: "Sour Worms",
-    price: "$2.50",
-    images: "/images/sourworms.jpg",
-  },
-  {
-    id: 3,
-    name: "", // not decided yet
-    price: "$",
-    images: "/images/",
-  },
-  {
-    id: 4,
-    name: "", // not decided yet
-    price: "$",
-    images: "/images/",
-  },
-  {
-    id: 5,
-    name: "Milk Chocolate",
-    price: "$3.50",
-    images: "/images/milkchocolate.jpg",
-  },
-  {
-    id: 6,
-    name: "M&M's",
-    price: "$2.5",
-    images: "/images/m&ms.jpg",
-  },
-  {
-    id: 7,
-    name: "", // not decided yet
-    price: "$",
-    images: "/images/",
-  },
-  {
-    id: 8,
-    name: "Caramel",
-    price: "$3.50",
-    images: "/images/caramel.jpg",
-  },
-  {
-    id: 9,
-    name: "Starburst",
-    price: "$3.00",
-    images: "/images/starburst.jpg",
-  },
-  {
-    id: 10,
-    name: "Skittles",
-    price: "$2.50",
-    images: "/images/skittles.jpg",
-  },
-  {
-    id: 11,
-    name: "Jelly Beans",
-    price: "$2.00",
-    images: "/images/jellybean.jpg",
-  },
-  {
-    id: 12,
-    name: "Sweat Hearts",
-    price: "$2.00",
-    images: "/images/sweetheart.jpg",
-  },
-];
+import { candyProducts } from "../api/mockdata";
 
 function Mainpage() {
+  const [products, setProducts] = React.useState([]);
+
+  React.useEffect(() => {
+    // Example: fetch from API
+    fetch("../api/candyProducts")
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []);
+
   return (
-    <div className="topsectionbigbox">
-      <div className="topsectionmedbox"></div>
+    <div className="mainpagebox">
+      <div className="topsectionbigbox">
+        <div className="topsectionmedbox">
+          <div className="topimgbox">
+            <img className="logotwo" src="/images/logo-desgin.png" />
+            <div className="orangebox">
+              <p>
+                Step into a world where every shelf sparkles with color, every
+                wrapper hides a little joy, and every bite takes you back to
+                childhood. At The Sweet Shopee , we believe candy isn’t just a
+                treat—it’s an experience. From handcrafted chocolates and
+                nostalgic classics to daring new flavors, our store is a
+                celebration of sweetness in all its forms
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,135 @@
 /*Catalog page CSS by Samantha Stroud*/
 
-@media (max-width: 1440px){
-    
-};
+.topimgbox {
+  aspect-ratio: 1233.88/412.62;
+  width: 77.11731rem;
+  border-radius: 1rem;
+  background: url(/images/sourworms.jpg) lightgray -0.441px -197.82px / 100.071%
+    231.235% no-repeat;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+@media (max-width: 1440px) {
+  /*Top section */
+  .topsectionbigbox {
+    height: 33.93819rem;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .topsectionmedbox {
+    width: 81.25rem;
+    height: 29.19681rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(180deg, #fff184 0%, #fba4b5 100%);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .logotwo {
+    width: 291.952px;
+    height: 291.952px;
+    transform: rotate(-0.352deg);
+    aspect-ratio: 291.95/291.95;
+  }
+
+  .orangebox {
+    width: auto;
+    height: auto;
+    border-radius: 1rem;
+    background: rgba(249, 183, 125, 0.73);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    margin-right: 2%;
+  }
+
+  .orangebox p {
+    width: auto;
+    height: auto;
+    color: #fff;
+    text-align: center;
+    font-family: DynaPuff;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  /*diver section*/
+  .divider {
+    height: 3rem;
+    background: linear-gradient(90deg, #f9b77d 0%, #fcd480 50%, #82ba89 100%);
+  }
+  /**/
+  /**/
+  /**/
+  /**/
+  /**/
+  /**/
+}
+
+@media (max-width: 1024px) {
+  /*Top section */
+  .topimgbox {
+    width: 92%;
+    aspect-ratio: 6 / 3;
+    border-radius: 1rem;
+  }
+  .topsectionmedbox {
+    width: 90%;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /*Top section */
+  .topimgbox {
+    height: 88%;
+    aspect-ratio: 6 / 3;
+    border-radius: 0.75rem;
+  }
+
+  .orangebox p {
+    font-size: medium;
+  }
+}
+
+@media (max-width: 425px) {
+  /*Top section */
+  .topsectionbigbox {
+    height: 20rem;
+  }
+
+  .topimgbox {
+    background: none;
+    box-shadow: none;
+  }
+
+  .topsectionmedbox {
+    height: 15rem;
+  }
+
+  .logotwo {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  /*Top section */
+  .topsectionmedbox {
+    height: 17rem;
+  }
+}

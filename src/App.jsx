@@ -1,9 +1,9 @@
 import React from "react";
 import { lazy, Suspense } from "react";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { BrowserRouter, Link, Router, Route, Routes } from "react-router-dom";
 
-import { candyProducts } from "./catalog-page/catalogpage";
+//import { candyProducts } from "./catalog-page/catalogpage";
 import "./App.css";
 
 //import the header and footer
@@ -22,15 +22,6 @@ const Landing = lazy(() => import("./catalog-page/catalogpage"));
 }
 
 function App() {
-  // This is just testing my products API, not all of it will stay! -sammie
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setProducts(candyProducts);
-    });
-  }, []);
-
   //Main App contents (ive adding routing to my catalog page) - sammie
   return (
     <div>
