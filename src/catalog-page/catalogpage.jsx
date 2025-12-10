@@ -1,17 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "./catalogpage.css";
-import { candyProducts } from "../api/mockdata";
+import { Button } from "@mantine/core";
 
 function Mainpage() {
-  const [products, setProducts] = React.useState([]);
+  const [candyproducts, setCandyProducts] = React.useState([]);
 
-  React.useEffect(() => {
-    // Example: fetch from API
-    fetch("../api/candyProducts")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
+  fetch("/data/candyProducts.json")
+    .then((res) => res.json())
+    .then((data) => setCandyProducts(data));
 
   return (
     <div className="mainpagebox">
@@ -31,6 +28,20 @@ function Mainpage() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="divider" />
+      <div className="bigcardbox">
+        {candyproducts.map((item) => (
+          <div className="candycard" key={item.id}>
+            <h3>{item.name || "Coming Soon!"}</h3>
+            <img src={item.images} alt={item.name || "Candy"} />
+
+            <p>{item.price !== "$" ? item.price : "Price TBD"}</p>
+            <Button color="pink" radius="md" fullWidth>
+              View More
+            </Button>
+          </div>
+        ))}
       </div>
     </div>
   );
