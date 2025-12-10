@@ -1,4 +1,5 @@
 import React from "react";
+import "./catalogpage.css";
 
 // the  candy product API
 export const candyProducts = [
@@ -75,3 +76,13 @@ export const candyProducts = [
     images: "/images/sweetheart.jpg",
   },
 ];
+
+function Mainpage() {
+  return (
+    <div className="topsectionbigbox">
+      <div className="topsectionmedbox"></div>
+    </div>
+  );
+}
+
+export default Mainpage;
