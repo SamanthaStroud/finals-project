@@ -14,12 +14,17 @@ import Footer from "./components/footer";
 import Mainpage from "./catalog-page/catalogpage";
 // import Checkout from "./checkout-page/checkoutpage.jsx"
 
+// import Cart page info
+import Cart from "./cart-page/cart";
+
 const Landing = lazy(() => import("./catalog-page/catalogpage"));
 
 //my other page to be added and routed later -sammie
 {
   /* const Checkout = lazy(() => import("./checkout-page/checkoutpage"));*/
 }
+
+const Cart = lazy(() => import("./catalog-page/catalogpage"));
 
 function App() {
   //Main App contents (ive adding routing to my catalog page) - sammie
@@ -30,7 +35,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Landing />} />
-            {/* Other routes */}
+            <Route path="/Cart" element={<Cart />} />
             {/*<Route path="/Checkout" element={<Checkout />} /> */}
           </Routes>
         </BrowserRouter>

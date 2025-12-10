@@ -2,7 +2,8 @@
 import React from "react";
 import "./header.css";
 import { Button } from "@mantine/core";
-import { Link } from "react-router-dom"; //waiting for cart page to be set up :)
+import { cart } from "cart.jsx";
+import { Link } from "react-router-dom";
 
 function Header() {
   const handleCart = () => {
@@ -17,23 +18,23 @@ function Header() {
         <h1>The Sweet Shoppe</h1>
       </div>
       {/* button to link to cart page */}
-      {/* <Link to="/cart" > */}
-      <Button
-        className="cartbtnimg"
-        styles={{
-          root: {
-            backgroundColor: "transparent",
-            position: "relative",
-            top: "16px",
-            "&:hover": {
+      <Link to="/cart">
+        <Button
+          className="cartbtnimg"
+          styles={{
+            root: {
               backgroundColor: "transparent",
+              position: "relative",
+              top: "16px",
+              "&:hover": {
+                backgroundColor: "transparent",
+              },
             },
-          },
-        }}
-      >
-        <img src="/images/Basket.svg" alt="Basket" />
-      </Button>
-      {/*</Link*/}
+          }}
+        >
+          <img src="/images/Basket.svg" alt="Basket" />
+        </Button>
+      </Link>
     </header>
   );
 }
