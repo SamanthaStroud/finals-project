@@ -27,15 +27,23 @@ function Footer() {
             <h3 className="locationtitle">Locations</h3>
 
             <div className="addressgroup">
-              <p>123 High Street</p>
-              <p>Grand Falls, NL</p>
-              <p>1-098-765-4321</p>
-            </div>
-            <hr />
-            <div className="addressgroup">
-              <p>123 Main Street</p>
-              <p>St.Johns, NL</p>
-              <p>1-709-456-7890</p>
+              <p>
+                123 High Street <br />
+                Grand Falls, NL
+                <br />
+                1-098-765-4321
+              </p>
+              <br />
+
+              <hr />
+
+              <p>
+                123 Main Street
+                <br />
+                St.Johns, NL
+                <br />
+                1-709-456-7890
+              </p>
             </div>
           </div>
         </div>

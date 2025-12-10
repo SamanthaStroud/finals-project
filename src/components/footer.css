@@ -20,6 +20,13 @@
   align-items: flex-start;
 }
 
+.infosection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
 .locationinfo {
   display: flex;
   flex-wrap: wrap;
@@ -28,9 +35,10 @@
 }
 
 .addressgroup {
+  display: flex;
   flex: 1;
   padding: 0 15px;
-  text-align: center;
+  align-items: flex-start;
 }
 
 .infosection {
@@ -63,9 +71,10 @@
   }
 
   .locationinfo hr {
-    width: 0.0625rem;
+    width: 0.188rem;
     height: 3.5645rem;
-    color: #ffff;
+    border: none;
+    background-color: #fff;
   }
 
   .footerlogo {
@@ -73,6 +82,17 @@
     height: 10.81444rem;
     transform: rotate(-0.352deg);
     aspect-ratio: 173.03/173.03;
+  }
+}
+
+@media (min-width: 768px) {
+  .infosection {
+    padding-top: 2rem;
+  }
+
+  .infosection p {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
 }
 
