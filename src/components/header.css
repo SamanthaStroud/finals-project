@@ -1,0 +1,42 @@
+/* header CSS by Samantha Stroud */
+* {
+  margin: 0;
+  font-family: "DynaPuff";
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 72px;
+  background: linear-gradient(90deg, #fba4b5 0%, #71c1e2 100%);
+}
+
+.logoimg {
+  padding-top: 4px;
+}
+
+@media (max-width: 1440px) {
+  .header h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 8px;
+  }
+
+  .logo {
+    width: 3.81744rem;
+    height: 3.81744rem;
+    transform: rotate(-0.352deg);
+    aspect-ratio: 61.08/61.08;
+  }
+  .storename {
+    padding-top: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .storename {
+    padding-top: 0px;
+  }
+}

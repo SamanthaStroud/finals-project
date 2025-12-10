@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  font-family: "DynaPuff";
+}
+
+.footer {
+  height: 177px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #71c1e2 0%, #fba4b5 100%);
+}
+
+.footer h3,
+.footer p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.locationinfo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addressgroup {
+  flex: 1;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.infosection {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1440px) {
+  .footer h3 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .locationinfo,
+  .operhourinfo {
+    flex-grow: 1;
+  }
+
+  .addressgroup p,
+  .operhourinfo p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .locationinfo hr {
+    width: 0.0625rem;
+    height: 3.5645rem;
+    color: #ffff;
+  }
+
+  .footerlogo {
+    width: 10.81444rem;
+    height: 10.81444rem;
+    transform: rotate(-0.352deg);
+    aspect-ratio: 173.03/173.03;
+  }
+}
+
+/*moblie CSS*/
+@media (max-width: 425px) {
+  .footerlogo {
+    display: none;
+  }
+  .locationinfo hr {
+    display: none;
+  }
+  .locationinfo {
+    padding-top: 8px;
+  }
+}
+
+@media (max-width: 320px) {
+  .operhourinfo {
+    padding-top: -8px;
+  }
+}
