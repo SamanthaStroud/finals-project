@@ -18,6 +18,8 @@ import Cartpage from "./cart-page/cart";
 
 //my other page to be added and routed later -sammie
 
+const Cart = lazy(() => import("./catalog-page/catalogpage"));
+
 function App() {
   //Main App contents (ive adding routing to my catalog page) - sammie
   return (
