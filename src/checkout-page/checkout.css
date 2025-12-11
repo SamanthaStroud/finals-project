@@ -1,0 +1,88 @@
+/*Checkout page CSS by Samantha Stroud*/
+/**/
+@media (max-width: 2560px) {
+  /*checkout box*/
+  .checkoutbox {
+    padding: 2rem;
+  }
+  .checkoutname {
+    color: #71c1e2;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .maincheckformbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 41.5625rem;
+    height: 51.9375rem;
+    border-radius: 1rem;
+    background: linear-gradient(180deg, #82ba89 0%, #71c1e2 100%);
+    padding: 1rem;
+  }
+
+  .infobox {
+    width: 37.8125rem;
+    height: 48.0625rem;
+    border-radius: 1rem;
+    background: #fba4b5;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+  .checksecnames {
+    color: #fff184;
+    text-align: center;
+    font-family: DynaPuff;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .inputboxs {
+    padding: 1rem;
+  }
+
+  .colourbox {
+    width: 35.625rem;
+    height: 22.5rem;
+    border-radius: 1rem;
+    background: linear-gradient(180deg, #fba4b5 0%, #fff184 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .orderbox {
+    width: 32.375rem;
+    height: 19.125rem;
+    border-radius: 1rem;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .orderboxname {
+    color: #fba4b5;
+    text-align: center;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .orderbox p {
+    color: #fba4b5;
+    font-family: DynaPuff;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 1rem;
+  }
+
+  /**/
+  /**/
+  /**/
+}
