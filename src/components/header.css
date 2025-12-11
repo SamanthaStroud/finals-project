@@ -14,7 +14,7 @@
   padding-top: 4px;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 2560px) {
   .header h1 {
     color: #fff;
     text-align: center;
@@ -32,6 +32,11 @@
   }
   .storename {
     padding-top: 16px;
+  }
+}
+@media (max-width: 375px) {
+  .storename {
+    padding-top: 0px;
   }
 }
 

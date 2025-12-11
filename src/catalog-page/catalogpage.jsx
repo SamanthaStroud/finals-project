@@ -30,14 +30,40 @@ function Mainpage() {
         </div>
       </div>
       <div className="divider" />
+
+      {/* specials section */}
+      <div className="specmainbox">
+        <p className="spectitle">Special Offers!</p>
+        <div className="specdetailboxs">
+          <div className="specboxone">
+            <p>BUY 3, GET ONE FREE! Mix And Match Madness</p>
+          </div>
+          <div className="specboxtwo">
+            <p>Free Gift with Orders Over $25!</p>
+          </div>
+          <div className="specboxthree">
+            <p>Birthday Club! Get a Free Candy Bag!</p>
+          </div>
+          <div className="specboxfour">
+            <p>Candy of the Month Club! First Month Free!</p>
+          </div>
+        </div>
+      </div>
+
+      {/* candy cards section */}
       <div className="bigcardbox">
         {candyproducts.map((item) => (
           <div className="candycard" key={item.id}>
             <h3>{item.name || "Coming Soon!"}</h3>
-            <img src={item.images} alt={item.name || "Candy"} />
+            <img
+              className="candycardimg"
+              src={item.images}
+              alt={item.name || "Candy"}
+            />
 
             <p>{item.price !== "$" ? item.price : "Price TBD"}</p>
-            <Button color="pink" radius="md" fullWidth>
+            {/* i got to add the link for the view more files -sammie */}
+            <Button color="pink" radius="lg">
               View More
             </Button>
           </div>

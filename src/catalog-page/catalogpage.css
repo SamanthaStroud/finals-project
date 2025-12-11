@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 2560px) {
   /*Top section */
   .topsectionbigbox {
     height: 33.93819rem;
@@ -73,14 +73,158 @@
     height: 3rem;
     background: linear-gradient(90deg, #f9b77d 0%, #fcd480 50%, #82ba89 100%);
   }
+  /*Speicals section*/
+  .specmainbox {
+    height: auto;
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+
+  .specdetailboxs {
+    display: flex;
+    gap: 2%;
+  }
+
+  .specmainbox p {
+    color: #71c1e2;
+    text-align: center;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .specboxone {
+    display: flex;
+    align-items: center;
+    width: 19.5rem;
+    height: 15rem;
+    border-radius: 1rem;
+    background: linear-gradient(180deg, #fff184 0%, #fba4b5 100%);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .specboxone p {
+    color: #82ba89;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .specboxtwo {
+    width: 19.5rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    background: linear-gradient(180deg, #f9b77d 0%, #fff184 100%);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .specboxtwo p {
+    color: #fba4b5;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .specboxthree {
+    width: 19.5rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    background: linear-gradient(180deg, #82ba89 0%, #71c1e2 100%);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .specboxthree p {
+    color: #f9b77d;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .specboxfour {
+    width: 19.5rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    background: linear-gradient(180deg, #fba4b5 0%, #71c1e2 100%);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .specboxfour p {
+    color: #fff184;
+    text-align: center;
+    font-family: DynaPuff;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
   /*Candy cards*/
   .candycard {
+    width: 19.5rem;
+    height: 21.5rem;
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  /**/
-  /**/
-  /**/
-  /**/
-  /**/
+
+  .candycard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .candycardimg {
+    width: 17.5rem;
+    height: 11.6875rem;
+    aspect-ratio: 280/187;
+    border-radius: 1rem;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .bigcardbox {
+    display: grid;
+    grid-template-columns: repeat(4, 19.5rem);
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem 0;
+    background: linear-gradient(180deg, #fba4b5 0%, #fff184 100%);
+  }
+
+  .candycard h3 {
+    color: #71c1e2;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .candycard p {
+    color: #82ba89;
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -94,6 +238,32 @@
     width: 90%;
     border-radius: 1rem;
   }
+  /*specials section */
+  .specdetailboxs {
+    overflow-x: auto;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-auto-flow: column;
+  }
+
+  /*card section */
+  .candycard img {
+    width: 90%;
+  }
+
+  .candycard {
+    width: 80%;
+    padding: 0;
+  }
+
+  .bigcardbox {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 19.5rem);
+    gap: 2;
+    padding-left: 6%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -106,6 +276,9 @@
 
   .orangebox p {
     font-size: medium;
+  }
+  .bigcardbox {
+    grid-template-columns: repeat(2, 19.5rem);
   }
 }
 
@@ -126,6 +299,11 @@
 
   .logotwo {
     display: none;
+  }
+
+  .bigcardbox {
+    grid-template-columns: repeat(1, 19.5rem);
+    padding-left: 16%;
   }
 }
 

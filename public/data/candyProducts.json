@@ -13,14 +13,14 @@
   },
   {
     "id": 3,
-    "name": "",
-    "price": "$",
+    "name": "Peach Rings",
+    "price": "$2.50",
     "images": "/images/"
   },
   {
     "id": 4,
-    "name": "",
-    "price": "$",
+    "name": "Rainbow Sours",
+    "price": "$2.50",
     "images": "/images/"
   },
   {
@@ -32,13 +32,13 @@
   {
     "id": 6,
     "name": "M&M's",
-    "price": "$2.5",
+    "price": "$2.50",
     "images": "/images/m&ms.jpg"
   },
   {
     "id": 7,
-    "name": "",
-    "price": "$",
+    "name": "Chocolate Pretzals",
+    "price": "$3.00",
     "images": "/images/"
   },
   {
