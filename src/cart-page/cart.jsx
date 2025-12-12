@@ -34,7 +34,10 @@ const cartItems = [
   },
 ];
 
-function Cartpage() {
+{
+  /* added the showmoddifier to take out certian parts of the code for my checkout page, wont interfer with your code - sammie  */
+}
+function Cartpage({ showmoddifier = true }) {
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.price * item.qty,
     0
@@ -62,44 +65,47 @@ function Cartpage() {
               <Image src={item.image} width={60} radius="md" />
               <Text fw={500}>{item.name}</Text>
             </Group>
-
-            <Group>
-              <Button size="xs" variant="light">
-                −
-              </Button>
-              <Text>{item.qty}</Text>
-              <Button size="xs" variant="light">
-                +
-              </Button>
-            </Group>
-
+            {showmoddifier && (
+              <Group>
+                <Button size="xs" variant="light">
+                  −
+                </Button>
+                <Text>{item.qty}</Text>
+                <Button size="xs" variant="light">
+                  +
+                </Button>
+              </Group>
+            )}
             <Text fw={600}>${item.price.toFixed(2)}</Text>
           </Group>
         ))}
       </Card>
 
-      <Card
-        shadow="lg"
-        mt="xl"
-        p="lg"
-        radius="lg"
-        style={{ maxWidth: 400, margin: "0 auto" }}
-      >
-        <Title order={4} mb="sm">
-          Order Summary
-        </Title>
+      {/* added the showmod to take out certian parts of the code for my checkout page, wont interfer with your code - sammie  */}
+      {showmoddifier && (
+        <Card
+          shadow="lg"
+          mt="xl"
+          p="lg"
+          radius="lg"
+          style={{ maxWidth: 400, margin: "0 auto" }}
+        >
+          <Title order={4} mb="sm">
+            Order Summary
+          </Title>
 
-        <Group justify="space-between">
-          <Text>Subtotal</Text>
-          <Text fw={600}>${subtotal.toFixed(2)}</Text>
-        </Group>
+          <Group justify="space-between">
+            <Text>Subtotal</Text>
+            <Text fw={600}>${subtotal.toFixed(2)}</Text>
+          </Group>
 
-        <Divider my="sm" />
+          <Divider my="sm" />
 
-        <Button fullWidth radius="md" mt="md">
-          Checkout
-        </Button>
-      </Card>
+          <Button fullWidth radius="md" mt="md">
+            Checkout
+          </Button>
+        </Card>
+      )}
     </Box>
   );
 }
