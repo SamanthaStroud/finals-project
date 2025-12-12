@@ -1,3 +1,4 @@
+// Page by Samantha Stroud
 import React from "react";
 import { useState, useEffect } from "react";
 import "./catalogpage.css";

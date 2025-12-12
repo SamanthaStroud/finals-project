@@ -1,5 +1,5 @@
 // Page code by Samantha Stroud
-
+import Cartpage from "../cart-page/cart";
 import React from "react";
 import "./checkout.css";
 import { Button, TextInput } from "@mantine/core";
@@ -98,7 +98,8 @@ function Checkout() {
       </div>
       <div className="cartandtotalbox">
         <div className="cartinfobox">
-          {/* add the cart code from cart.jsx */}
+          {/* allows code from chart to show only what i want to be shown */}
+          <Cartpage showmoddifier={false} />
         </div>
         <div className="subtotalbox">
           <div className="colourbox">

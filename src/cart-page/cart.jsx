@@ -25,7 +25,8 @@ const cartItems = [
   },
 ];
 
-export default function Cart() {
+// added showmoddifier so i can pull certian parts of your code into the checkout page, it will NOT interfer with your code - sammie
+export default function Carts({ showmoddifier = true }) {
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.price * item.qty,
     0
@@ -46,12 +47,13 @@ export default function Cart() {
             </div>
 
             {/* Quantity Controls */}
-            <div className="qty-controls">
-              <button className="qty-button">−</button>
-              <p className="item-qty">{item.qty}</p>
-              <button className="qty-button">+</button>
-            </div>
-
+            {showmoddifier && (
+              <div className="qty-controls">
+                <button className="qty-button">−</button>
+                <p className="item-qty">{item.qty}</p>
+                <button className="qty-button">+</button>
+              </div>
+            )}
             {/* Price */}
             <p className="item-price">${item.price.toFixed(2)}</p>
           </div>
@@ -59,18 +61,21 @@ export default function Cart() {
       </div>
 
       {/* Order Summary Card */}
-      <div className="summary-card">
-        <h4>Order Summary</h4>
 
-        <div className="summary-row">
-          <p>Subtotal</p>
-          <p className="subtotal-amount">${subtotal.toFixed(2)}</p>
+      {showmoddifier && (
+        <div className="summary-card">
+          <h4>Order Summary</h4>
+
+          <div className="summary-row">
+            <p>Subtotal</p>
+            <p className="subtotal-amount">${subtotal.toFixed(2)}</p>
+          </div>
+
+          <hr className="summary-divider" />
+
+          <button className="checkout-button">Checkout</button>
         </div>
-
-        <hr className="summary-divider" />
-
-        <button className="checkout-button">Checkout</button>
-      </div>
+      )}
     </div>
   );
 }
