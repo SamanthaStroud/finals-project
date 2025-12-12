@@ -1,15 +1,6 @@
-import {
-  Card,
-  Image,
-  Text,
-  Group,
-  Button,
-  Box,
-  Title,
-  Divider,
-} from "@mantine/core";
-
 import React from "react";
+import "./Cart.css";
+
 const cartItems = [
   {
     id: 1,
@@ -34,80 +25,57 @@ const cartItems = [
   },
 ];
 
-{
-  /* added the showmoddifier to take out certian parts of the code for my checkout page, wont interfer with your code - sammie  */
-}
-function Cartpage({ showmoddifier = true }) {
+// added showmoddifier so i can pull certian parts of your code into the checkout page, it will NOT interfer with your code - sammie
+export default function Carts({ showmoddifier = true }) {
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.price * item.qty,
     0
   );
 
   return (
-    <Box ta="center" p="xl">
-      <Title order={2} mb="md">
-        Your Cart
-      </Title>
+    <div className="cart-container">
+      <h2>Your Cart</h2>
 
-      <Card
-        shadow="md"
-        p="lg"
-        radius="lg"
-        style={{
-          background: "linear-gradient(#f2b6c6, #f7c6c6)",
-          maxWidth: "800px",
-          margin: "0 auto",
-        }}
-      >
+      {/* Cart Items Card */}
+      <div className="cart-items-card">
         {cartItems.map((item) => (
-          <Group key={item.id} justify="space-between" align="center" mb="md">
-            <Group>
-              <Image src={item.image} width={60} radius="md" />
-              <Text fw={500}>{item.name}</Text>
-            </Group>
+          <div key={item.id} className="cart-item-group">
+            {/* Item Info */}
+            <div className="item-info">
+              <img src={item.image} alt={item.name} className="item-image" />
+              <p className="item-name">{item.name}</p>
+            </div>
+
+            {/* Quantity Controls */}
             {showmoddifier && (
-              <Group>
-                <Button size="xs" variant="light">
-                  −
-                </Button>
-                <Text>{item.qty}</Text>
-                <Button size="xs" variant="light">
-                  +
-                </Button>
-              </Group>
+              <div className="qty-controls">
+                <button className="qty-button">−</button>
+                <p className="item-qty">{item.qty}</p>
+                <button className="qty-button">+</button>
+              </div>
             )}
-            <Text fw={600}>${item.price.toFixed(2)}</Text>
-          </Group>
+            {/* Price */}
+            <p className="item-price">${item.price.toFixed(2)}</p>
+          </div>
         ))}
-      </Card>
+      </div>
 
-      {/* added the showmod to take out certian parts of the code for my checkout page, wont interfer with your code - sammie  */}
+      {/* Order Summary Card */}
+
       {showmoddifier && (
-        <Card
-          shadow="lg"
-          mt="xl"
-          p="lg"
-          radius="lg"
-          style={{ maxWidth: 400, margin: "0 auto" }}
-        >
-          <Title order={4} mb="sm">
-            Order Summary
-          </Title>
+        <div className="summary-card">
+          <h4>Order Summary</h4>
 
-          <Group justify="space-between">
-            <Text>Subtotal</Text>
-            <Text fw={600}>${subtotal.toFixed(2)}</Text>
-          </Group>
+          <div className="summary-row">
+            <p>Subtotal</p>
+            <p className="subtotal-amount">${subtotal.toFixed(2)}</p>
+          </div>
 
-          <Divider my="sm" />
+          <hr className="summary-divider" />
 
-          <Button fullWidth radius="md" mt="md">
-            Checkout
-          </Button>
-        </Card>
+          <button className="checkout-button">Checkout</button>
+        </div>
       )}
-    </Box>
+    </div>
   );
 }
-
-export default Cartpage;
