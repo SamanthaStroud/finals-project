@@ -6,9 +6,11 @@ import { Button } from "@mantine/core";
 function Mainpage() {
   const [candyproducts, setCandyProducts] = React.useState([]);
 
-  fetch("/data/candyProducts.json")
-    .then((res) => res.json())
-    .then((data) => setCandyProducts(data));
+  useEffect(() => {
+    fetch("/data/candyProducts.json")
+      .then((res) => res.json())
+      .then((data) => setCandyProducts(data));
+  }, []);
 
   return (
     <div className="mainpagebox">
