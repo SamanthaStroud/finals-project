@@ -1,5 +1,7 @@
 import React from "react";
 import "./Cart.css";
+import { useCart } from "../context/cartContent.jsx";
+import { useLocation } from "wouter";
 
 const cartItems = [
   {
@@ -25,8 +27,9 @@ const cartItems = [
   },
 ];
 
-// added showmoddifier so i can pull certian parts of your code into the checkout page, it will NOT interfer with your code - sammie
-export default function Carts({ showmoddifier = true }) {
+export default function Cart() {
+  const [location, setLocation] = useLocation();
+
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.price * item.qty,
     0
@@ -47,13 +50,12 @@ export default function Carts({ showmoddifier = true }) {
             </div>
 
             {/* Quantity Controls */}
-            {showmoddifier && (
-              <div className="qty-controls">
-                <button className="qty-button">−</button>
-                <p className="item-qty">{item.qty}</p>
-                <button className="qty-button">+</button>
-              </div>
-            )}
+            <div className="qty-controls">
+              <button className="qty-button">−</button>
+              <p className="item-qty">{item.qty}</p>
+              <button className="qty-button">+</button>
+            </div>
+
             {/* Price */}
             <p className="item-price">${item.price.toFixed(2)}</p>
           </div>
@@ -61,21 +63,23 @@ export default function Carts({ showmoddifier = true }) {
       </div>
 
       {/* Order Summary Card */}
+      <div className="summary-card">
+        <h4>Order Summary</h4>
 
-      {showmoddifier && (
-        <div className="summary-card">
-          <h4>Order Summary</h4>
-
-          <div className="summary-row">
-            <p>Subtotal</p>
-            <p className="subtotal-amount">${subtotal.toFixed(2)}</p>
-          </div>
-
-          <hr className="summary-divider" />
-
-          <button className="checkout-button">Checkout</button>
+        <div className="summary-row">
+          <p>Subtotal</p>
+          <p className="subtotal-amount">${subtotal.toFixed(2)}</p>
         </div>
-      )}
+
+        <hr className="summary-divider" />
+
+        <button
+          className="checkout-button"
+          onClick={() => setLocation("/checkout")}
+        >
+          Checkout
+        </button>
+      </div>
     </div>
   );
 }
