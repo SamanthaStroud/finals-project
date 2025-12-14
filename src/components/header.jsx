@@ -8,7 +8,21 @@ function Header() {
   return (
     <header className="header">
       <div className="logoimg">
-        <img className="logo" src="/images/logo-desgin.png" />
+        <Link href="/">
+          <Button
+            styles={{
+              root: {
+                backgroundColor: "transparent",
+                top: "16px",
+                "&:hover": {
+                  backgroundColor: "transparent",
+                },
+              },
+            }}
+          >
+            <img className="logo" src="/images/logo-desgin.png" />
+          </Button>
+        </Link>
       </div>
       <div className="storename">
         <h1>The Sweet Shoppe</h1>
