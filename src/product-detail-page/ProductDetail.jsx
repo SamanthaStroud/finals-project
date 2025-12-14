@@ -16,6 +16,7 @@ try {
 }
 
 function ProductDetail({ id }) {
+
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -30,7 +31,7 @@ function ProductDetail({ id }) {
         setError("");
 
         // JSON Server endpoint – we can mess with the URL if we need!
-        const response = await fetch(`http://localhost:3000/products/${id}`);
+        const response = await fetch(`http://localhost:3000/products`);
         if (!response.ok) {
           throw new Error("Product not found");
         }

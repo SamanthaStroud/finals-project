@@ -3,6 +3,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./catalogpage.css";
 import { Button } from "@mantine/core";
+import { Link } from "wouter";
 
 function Mainpage() {
   const [candyproducts, setCandyProducts] = React.useState([]);
@@ -65,10 +66,11 @@ function Mainpage() {
             />
 
             <p>{item.price !== "$" ? item.price : "Price TBD"}</p>
-            {/* i got to add the link for the view more files -sammie */}
-            <Button color="pink" radius="lg">
-              View More
-            </Button>
+            <Link href="/products">
+              <Button color="pink" radius="lg">
+                View More
+              </Button>
+            </Link>
           </div>
         ))}
       </div>

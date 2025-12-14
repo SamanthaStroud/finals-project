@@ -15,13 +15,13 @@
     "id": 3,
     "name": "Peach Rings",
     "price": "$2.50",
-    "images": "/images/"
+    "images": "/images/peachring.jpg"
   },
   {
     "id": 4,
     "name": "Rainbow Sours",
     "price": "$2.50",
-    "images": "/images/"
+    "images": "/images/rainbowbelt.jpg"
   },
   {
     "id": 5,
@@ -39,7 +39,7 @@
     "id": 7,
     "name": "Chocolate Pretzals",
     "price": "$3.00",
-    "images": "/images/"
+    "images": "/images/chcopretzel.jpg"
   },
   {
     "id": 8,
