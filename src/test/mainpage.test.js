@@ -1,4 +1,4 @@
-// Samanthas Test
+// Samanthas Test for the mainpage/catalog page
 import React from "react";
 import { MantineProvider } from "@mantine/core";
 import { render, screen, waitFor } from "@testing-library/react";

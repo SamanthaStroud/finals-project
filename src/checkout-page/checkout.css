@@ -97,7 +97,18 @@
     margin: 0.5rem;
   }
 
+  /*thank you section */
+
+  .thankyou {
+    color: #fba4b5;
+    font-family: DynaPuff;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+  }
   /**/
   /**/
-  /**/
+}
+
+@media (max-width: 425px) {
 }
