@@ -1,0 +1,142 @@
+/* src/product-detail-page/product-detail.css */
+/* Product Detail page CSS – Sweet Shoppe style */
+
+.product-detail-page {
+  font-family: "DynaPuff", system-ui, sans-serif;
+  background: linear-gradient(90deg, #fba4b5 0%, #71c1e2 100%);
+  min-height: 100vh;
+}
+
+/* top gradient bar */
+.product-detail-header-bar {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #fba4b5 0%, #71c1e2 100%);
+}
+
+.store-title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* white inner canvas */
+.product-detail-content {
+  background-color: #ffffff;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem 2.5rem 4rem;
+}
+
+.product-detail-heading {
+  color: #39b3e6;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* two main cards */
+.product-detail-cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* LEFT CARD – main info */
+.product-main-card {
+  flex: 1 1 55%;
+  background: linear-gradient(180deg, #82ba89 0%, #71c1e2 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  padding: 1.25rem;
+}
+
+.product-main-inner {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.product-main-image {
+  width: 220px;
+  height: 180px;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.product-main-info {
+  color: #ffffff;
+}
+
+.product-main-name {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.product-main-price,
+.product-main-stock {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+}
+
+.product-add-button {
+  margin-top: 0.75rem;
+  background-color: #39b3e6;
+  color: #ffffff;
+}
+
+/* description bar under the image/info */
+.product-main-description {
+  margin-top: 1rem;
+  background-color: #fba4b5;
+  color: #ffffff;
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+/* RIGHT CARD – “Why you’ll love them” */
+.product-love-card {
+  flex: 1 1 35%;
+  background: linear-gradient(180deg, #fba4b5 0%, #fff184 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+}
+
+.product-love-heading {
+  color: #39b3e6;
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.product-love-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: #39b3e6;
+  font-size: 0.95rem;
+}
+
+/* messages for loading/error states */
+.product-detail-message {
+  padding: 2rem;
+  text-align: center;
+  font-family: "DynaPuff", system-ui, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .product-detail-content {
+    padding: 1.5rem 1.25rem 3rem;
+  }
+
+  .product-detail-cards {
+    flex-direction: column;
+  }
+
+  .product-main-image {
+    width: 100%;
+    height: auto;
+  }
+}

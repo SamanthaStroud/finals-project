@@ -1,29 +1,46 @@
+// src/App.jsx
 import React from "react";
 import { Route, Switch } from "wouter";
 import "./App.css";
 
-//import the header and footer
+// layout
 import Header from "./components/header";
 import Footer from "./components/footer";
-//import the pages
+
+// pages
 import Mainpage from "./catalog-page/catalogpage";
 import Checkout from "./checkout-page/checkout";
 import Cartpage from "./cart-page/cart";
+import ProductDetail from "./product-detail-page/ProductDetail";
 
 function App() {
-  //Main App contents
+  // Main App contents
   return (
-    <div>
+    <>
       <Header />
-      <main>
-        <Switch>
-          <Route path="/" component={Mainpage} />
-          <Route path="/cart" component={Cartpage} />
-          <Route path="/checkout" component={Checkout} />
-        </Switch>
-      </main>
+      <Switch>
+        <Route path="/">
+          <Mainpage />
+        </Route>
+        <Route path="/products">
+          <ProductDetail />
+        </Route>
+
+        {/* Product Detail page – uses :id from the URL */}
+        {/* <Route path="/products/:id">
+          {(params) => <ProductDetail id={params.id} />}
+        </Route> */}
+
+        <Route path="/cart">
+          <Cartpage />
+        </Route>
+
+        <Route path="/checkout">
+          <Checkout />
+        </Route>
+      </Switch>
       <Footer />
-    </div>
+    </>
   );
 }
 

@@ -3,6 +3,7 @@ import Cartpage from "../cart-page/cart";
 import React from "react";
 import "./checkout.css";
 import { Button, TextInput } from "@mantine/core";
+import { useLocation } from "wouter";
 
 function Checkout() {
   const [sub, setSub] = React.useState(0);

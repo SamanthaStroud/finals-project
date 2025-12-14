@@ -1,5 +1,7 @@
 import React from "react";
 import "./Cart.css";
+import { useCart } from "../context/cartContent.jsx";
+import { useLocation } from "wouter";
 
 const cartItems = [
   {
@@ -25,13 +27,16 @@ const cartItems = [
   },
 ];
 
-// added showmoddifier so i can pull certian parts of your code into the checkout page, it will NOT interfer with your code - sammie
-export default function Carts({ unsubtotalcb = null, showmoddifier = true }) {
-  // React.useEffect(() => {
-  //   if (!!unsubtotalcb){
-  //     unsubtotalcb(subtotal)
-  //   }
-  // }, [unsubtotalcb])
+// ive added the unsubtotal and showmoddifer to pull certian parts of your code into my checkout page- they will not interfier with your code :) - Sammie
+export default function Cart({ unsubtotalcb = null, showmoddifier = true }) {
+  const [location, setLocation] = useLocation();
+
+  React.useEffect(() => {
+    if (!!unsubtotalcb) {
+      unsubtotalcb(subtotal);
+    }
+  }, [unsubtotalcb]);
+
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.price * item.qty,
     0
@@ -50,37 +55,40 @@ export default function Carts({ unsubtotalcb = null, showmoddifier = true }) {
               <img src={item.image} alt={item.name} className="item-image" />
               <p className="item-name">{item.name}</p>
             </div>
-
             {/* Quantity Controls */}
-            {showmoddifier && (
+            {/* showmod added by sammie */}
+            (showmoddifier &&{" "}
+            {
               <div className="qty-controls">
                 <button className="qty-button">−</button>
                 <p className="item-qty">{item.qty}</p>
                 <button className="qty-button">+</button>
               </div>
-            )}
-            {/* Price */}
+            }
+            ){/* Price */}
             <p className="item-price">${item.price.toFixed(2)}</p>
           </div>
         ))}
       </div>
 
       {/* Order Summary Card */}
+      <div className="summary-card">
+        <h4>Order Summary</h4>
 
-      {showmoddifier && (
-        <div className="summary-card">
-          <h4>Order Summary</h4>
-
-          <div className="summary-row">
-            <p>Subtotal</p>
-            <p className="subtotal-amount">${subtotal.toFixed(2)}</p>
-          </div>
-
-          <hr className="summary-divider" />
-
-          <button className="checkout-button">Checkout</button>
+        <div className="summary-row">
+          <p>Subtotal</p>
+          <p className="subtotal-amount">${subtotal.toFixed(2)}</p>
         </div>
-      )}
+
+        <hr className="summary-divider" />
+
+        <button
+          className="checkout-button"
+          onClick={() => setLocation("/checkout")}
+        >
+          Checkout
+        </button>
+      </div>
     </div>
   );
 }
