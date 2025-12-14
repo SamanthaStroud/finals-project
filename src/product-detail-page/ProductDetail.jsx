@@ -79,7 +79,6 @@ function ProductDetail({ id }) {
 
   return (
     <main className="product-detail-page">
-      
       <section className="product-detail-header-bar">
         <h1 className="store-title">The Sweet Shoppe</h1>
       </section>
@@ -116,9 +115,7 @@ function ProductDetail({ id }) {
               </div>
             </div>
 
-            <p className="product-main-description">
-              {product.description}
-            </p>
+            <p className="product-main-description">{product.description}</p>
           </article>
 
           {/* RIGHT CARD – “Why you’ll love them” points */}

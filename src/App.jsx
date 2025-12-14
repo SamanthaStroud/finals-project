@@ -22,14 +22,11 @@ function App() {
         <Route path="/">
           <Mainpage />
         </Route>
-        <Route path="/products">
-          <ProductDetail />
-        </Route>
 
         {/* Product Detail page – uses :id from the URL */}
-        {/* <Route path="/products/:id">
+        <Route path="/products/:id">
           {(params) => <ProductDetail id={params.id} />}
-        </Route> */}
+        </Route>
 
         <Route path="/cart">
           <Cartpage />
