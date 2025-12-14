@@ -5,6 +5,8 @@ import "./checkout.css";
 import { Button, TextInput } from "@mantine/core";
 
 function Checkout() {
+  const [sub, setSub] = React.useState(0);
+
   return (
     <div className="mainpagebox">
       <div className="checkoutbox">
@@ -99,7 +101,7 @@ function Checkout() {
       <div className="cartandtotalbox">
         <div className="cartinfobox">
           {/* allows code from chart to show only what i want to be shown */}
-          <Cartpage showmoddifier={false} />
+          <Cartpage showmoddifier={false} unsubtotalcb={setSub} />
         </div>
         <div className="subtotalbox">
           <div className="colourbox">
@@ -109,7 +111,7 @@ function Checkout() {
               </div>
               <div className="subtotal">
                 <p>Subtotal</p>
-                {/* add code to display the order subtotal */}
+                <p>{sub}</p>
               </div>
               <hr />
               <div className="shipping">

@@ -26,7 +26,12 @@ const cartItems = [
 ];
 
 // added showmoddifier so i can pull certian parts of your code into the checkout page, it will NOT interfer with your code - sammie
-export default function Carts({ showmoddifier = true }) {
+export default function Carts({ unsubtotalcb = null, showmoddifier = true }) {
+  // React.useEffect(() => {
+  //   if (!!unsubtotalcb){
+  //     unsubtotalcb(subtotal)
+  //   }
+  // }, [unsubtotalcb])
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.price * item.qty,
     0
