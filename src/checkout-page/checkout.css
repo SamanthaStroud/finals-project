@@ -3,8 +3,11 @@
 @media (max-width: 2560px) {
   /*checkout box*/
   .checkoutbox {
-    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
   }
+
   .checkoutname {
     color: #71c1e2;
     font-size: 3rem;
@@ -44,21 +47,28 @@
     padding: 1rem;
   }
 
+  .cartandtotalbox {
+    display: flex;
+    justify-content: center;
+  }
+
   .colourbox {
     width: 35.625rem;
-    height: 22.5rem;
+    height: 23rem;
     border-radius: 1rem;
     background: linear-gradient(180deg, #fba4b5 0%, #fff184 100%);
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
   }
 
   .orderbox {
     width: 32.375rem;
-    height: 19.125rem;
+    height: 20rem;
     border-radius: 1rem;
     background: #fff;
+    display: grid;
     justify-content: center;
     align-items: center;
   }
@@ -79,7 +89,12 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding: 1rem;
+    padding: 0.5rem;
+  }
+
+  .orderbtn {
+    display: flex;
+    margin: 0.5rem;
   }
 
   /**/

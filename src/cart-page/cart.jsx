@@ -31,6 +31,7 @@ const cartItems = [
 export default function Cart({ unsubtotalcb = null, showmoddifier = true }) {
   const [location, setLocation] = useLocation();
 
+  // added by sammie
   React.useEffect(() => {
     if (!!unsubtotalcb) {
       unsubtotalcb(subtotal);
@@ -57,38 +58,40 @@ export default function Cart({ unsubtotalcb = null, showmoddifier = true }) {
             </div>
             {/* Quantity Controls */}
             {/* showmod added by sammie */}
-            (showmoddifier &&{" "}
-            {
+            {showmoddifier && (
               <div className="qty-controls">
                 <button className="qty-button">−</button>
                 <p className="item-qty">{item.qty}</p>
                 <button className="qty-button">+</button>
               </div>
-            }
-            ){/* Price */}
+            )}
+            {/* Price */}
             <p className="item-price">${item.price.toFixed(2)}</p>
           </div>
         ))}
       </div>
 
       {/* Order Summary Card */}
-      <div className="summary-card">
-        <h4>Order Summary</h4>
+      {/* showmod added by sammie */}
+      {showmoddifier && (
+        <div className="summary-card">
+          <h4>Order Summary</h4>
 
-        <div className="summary-row">
-          <p>Subtotal</p>
-          <p className="subtotal-amount">${subtotal.toFixed(2)}</p>
+          <div className="summary-row">
+            <p>Subtotal</p>
+            <p className="subtotal-amount">${subtotal.toFixed(2)}</p>
+          </div>
+
+          <hr className="summary-divider" />
+
+          <button
+            className="checkout-button"
+            onClick={() => setLocation("/checkout")}
+          >
+            Checkout
+          </button>
         </div>
-
-        <hr className="summary-divider" />
-
-        <button
-          className="checkout-button"
-          onClick={() => setLocation("/checkout")}
-        >
-          Checkout
-        </button>
-      </div>
+      )}
     </div>
   );
 }

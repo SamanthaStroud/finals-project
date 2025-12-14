@@ -8,12 +8,18 @@ import { useLocation } from "wouter";
 function Checkout() {
   const [sub, setSub] = React.useState(0);
 
+  const shipping = 5.99;
+  const total = sub + 5.99;
+
+
   return (
     <div className="mainpagebox">
+      <div className="cartinfobox">
+        {/* allows code from chart to show only what i want to be shown */}
+        <Cartpage showmoddifier={false} unsubtotalcb={setSub} />
+      </div>
       <div className="checkoutbox">
-        <div className="checkoutname">
-          <p>Checkout</p>
-        </div>
+        <div className="checkoutname">{/* <p>Checkout</p> */}</div>
         <div className="maincheckformbox">
           <div className="infobox">
             <div className="checksecnames">
@@ -100,10 +106,6 @@ function Checkout() {
         </div>
       </div>
       <div className="cartandtotalbox">
-        <div className="cartinfobox">
-          {/* allows code from chart to show only what i want to be shown */}
-          <Cartpage showmoddifier={false} unsubtotalcb={setSub} />
-        </div>
         <div className="subtotalbox">
           <div className="colourbox">
             <div className="orderbox">
@@ -117,14 +119,14 @@ function Checkout() {
               <hr />
               <div className="shipping">
                 <p>Shipping</p>
-                {/* add code to display the Shipping ammount */}
+                <p>{shipping}</p>
               </div>
               <hr />
               <div className="total">
                 <p>Total</p>
-                {/* add code to display the Total ammount */}
+                <p>{total}</p>
               </div>
-              <Button className="orderbtn" radius={"xl"}>
+              <Button className="orderbtn" radius={"xl"} color="#fba4b5">
                 Place Order
               </Button>
             </div>
