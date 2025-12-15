@@ -14,7 +14,6 @@ import Cartpage from "./cart-page/cart";
 import ProductDetail from "./product-detail-page/ProductDetail";
 
 function App() {
-  // Main App contents
   return (
     <>
       <Header />
@@ -24,14 +23,9 @@ function App() {
         </Route>
 
         {/* Product Detail page – uses :id from the URL */}
-
-        <Route path="/Products">
-          <ProductDetail />
-        </Route>
-        
-        {/* <Route path="/products/:id">
+        <Route path="/products/:id">
           {(params) => <ProductDetail id={params.id} />}
-        </Route> */}
+        </Route>
 
         <Route path="/cart">
           <Cartpage />

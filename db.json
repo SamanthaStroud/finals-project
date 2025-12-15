@@ -1,0 +1,172 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Gummy Bears",
+      "price": 5.40,
+      "stock": 32,
+      "image": "/images/gumybear.jpg",
+      "description": "Colourful, chewy Gummy Bears bursting with classic fruity flavours, perfect for snacking, parties, and candy buffets.",
+      "highlights": [
+        "Soft, chewy texture with a sweet fruity bite in every bear.",
+        "Assorted flavours like cherry, lemon, orange, apple and pineapple.",
+        "Approx. 40 gummies per 500 g bag.",
+        "Great for movie nights, birthday parties or candy jars."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Sour Worms",
+      "price": 4.29,
+      "stock": 27,
+      "image": "/images/sourworms.jpg",
+      "description": "Colourful, tangy Sour Worms with a sweet-and-sour sugar coating, perfect for snacking, sharing, and candy buffets.",
+      "highlights": [
+        "Soft, chewy texture with a fizzy sour sugar coating in every bite.",
+        "Bright two-tone worms in mixed fruity flavours.",
+        "Approx. 35 worms per 500 g bag.",
+        "A fun choice for movie nights, parties, or sour-candy lovers."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Rainbow Belts",
+      "price": 4.79,
+      "stock": 24,
+      "image": "/images/rainbowbelt.jpg",
+      "description": "Stretchy, striped Rainbow Belts packed with sour fruity flavour, ideal for decorating desserts or enjoying straight from the bag.",
+      "highlights": [
+        "Long, chewy belts with a bold sweet-and-sour kick.",
+        "Rainbow stripes with mixed fruit flavours in every piece.",
+        "Approx. 25 belts per 500 g bag.",
+        "Great for cake decorating, party favours, and candy charcuterie boards."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Peach Rings",
+      "price": 4.99,
+      "stock": 20,
+      "image": "/images/peachring.jpg",
+      "description": "Soft, juicy Peach Rings with a sweet peach flavour and light sugar coating, perfect for summer vibes any time of year.",
+      "highlights": [
+        "Classic ring shape with a soft, gummy bite.",
+        "Sweet peach flavour with a hint of tang.",
+        "Approx. 40 rings per 500 g bag.",
+        "Perfect for candy jars, party tables, or late-night treats."
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Milk Chocolate",
+      "price": 5.19,
+      "stock": 30,
+      "image": "/images/milkchocolate.jpg",
+      "description": "Silky, creamy Milk Chocolate pieces that melt in your mouth, ideal for snacking, baking, or gifting.",
+      "highlights": [
+        "Smooth, creamy milk chocolate with a rich cocoa taste.",
+        "Bite-sized pieces that are easy to share or bake with.",
+        "Approx. 30 pieces per 300 g bag.",
+        "Perfect for hot chocolate toppers, trail mixes, or candy bowls."
+      ]
+    },
+    {
+      "id": 6,
+      "name": "M&M’s",
+      "price": 5.89,
+      "stock": 28,
+      "image": "/images/m&ms.jpg",
+      "description": "Crunchy candy-coated chocolate pieces in bright colours, perfect for snacking, baking, and party mixes.",
+      "highlights": [
+        "Crispy candy shell with smooth chocolate inside.",
+        "Rainbow colours that look great in bowls and desserts.",
+        "Approx. 80 pieces per 400 g bag.",
+        "Ideal for cookies, cupcakes, and movie-night munching."
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Chocolate Pretzels",
+      "price": 5.59,
+      "stock": 23,
+      "image": "/images/chcopretzel.jpg",
+      "description": "Crunchy, salty pretzels dipped in smooth milk chocolate, perfect for satisfying both sweet and salty cravings.",
+      "highlights": [
+        "Crisp pretzel center with a rich milk chocolate coating.",
+        "Sweet-and-salty flavour combo in every bite.",
+        "Approx. 28 chocolate pretzels per 300 g bag.",
+        "Great for movie nights, party bowls, or gifting."
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Caramel",
+      "price": 4.69,
+      "stock": 22,
+      "image": "/images/caramel.jpg",
+      "description": "Rich, buttery Caramel squares with a slow, chewy bite, perfect for savouring or sharing.",
+      "highlights": [
+        "Soft, chewy texture that melts slowly as you eat.",
+        "Classic buttery caramel flavour with a hint of vanilla.",
+        "Approx. 30 squares per 300 g bag.",
+        "Great for candy dishes, baking, or dipping in chocolate."
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Starburst",
+      "price": 5.89,
+      "stock": 26,
+      "image": "/images/starburst.jpg",
+      "description": "Juicy, fruit-flavoured chews in bright colours, packed with bold flavour in every piece.",
+      "highlights": [
+        "Individually wrapped chewy squares for easy sharing.",
+        "Mix of classic fruity flavours in each bag.",
+        "Approx. 45 chews per 350 g bag.",
+        "Perfect for lunch boxes, road trips, and party pinatas."
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Skittles",
+      "price": 6.29,
+      "stock": 25,
+      "image": "/images/skittles.jpg",
+      "description": "Crunchy, colourful Skittles with intense fruit flavour, great for snacking by the handful.",
+      "highlights": [
+        "Crisp candy shell with chewy fruity centres.",
+        "Bright rainbow colours that pop in any candy mix.",
+        "Approx. 70 pieces per 400 g bag.",
+        "Fun for games, party mixes, and movie marathons."
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Jellybeans",
+      "price": 5.49,
+      "stock": 29,
+      "image": "/images/jellybean.jpg",
+      "description": "Classic Jellybeans in a rainbow of colours and flavours, perfect for jars, favours, and seasonal treats.",
+      "highlights": [
+        "Firm, chewy texture with a sweet jelly centre.",
+        "Mixed fruity flavours in every scoop.",
+        "Approx. 80 beans per 400 g bag.",
+        "Great for candy jars, Easter baskets, and guessing games."
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Sweet Hearts",
+      "price": 5.19,
+      "stock": 18,
+      "image": "/images/sweetheart.jpg",
+      "description": "Pastel Sweet Hearts with a light crunch and gentle fruity flavours, perfect for celebrations and gift bags.",
+      "highlights": [
+        "Crunchy, chalky texture that melts quickly on the tongue.",
+        "Cute heart shapes in soft pastel colours.",
+        "Approx. 90 hearts per 300 g bag.",
+        "Ideal for Valentine’s gifts, party favours, and decorating desserts."
+      ]
+    }
+  ]
+}

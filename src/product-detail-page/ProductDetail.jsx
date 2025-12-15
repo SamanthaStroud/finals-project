@@ -4,24 +4,14 @@
 import React, { useEffect, useState } from "react";
 import "./product-detail.css";
 import { Button } from "@mantine/core";
-
-// NOTE PALS!!! We can implement useCart in context/cartContent.jsx.
-// This tries to import it but falls back safely if it doesn't exist yet.
-let useCartHook;
-try {
-  // eslint-disable-next-line global-require, import/no-unresolved
-  ({ useCart: useCartHook } = require("../context/cartContent"));
-} catch {
-  useCartHook = null;
-}
+import { useCart } from "../components/cartContent.jsx";
 
 function ProductDetail({ id }) {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  const cartContext = useCartHook ? useCartHook() : null;
-  const addToCart = cartContext?.addToCart || (() => {});
+  const { addToCart } = useCart();
 
   useEffect(() => {
     async function fetchProduct() {
@@ -29,25 +19,17 @@ function ProductDetail({ id }) {
         setLoading(true);
         setError("");
 
-        // JSON Server endpoint – we can mess with the URL if we need!
-        // ive messed with this section and ive got Product not foudn to show so its now fetching the JSON for you just need to figure out the product found part- Sammie
-        const response = await fetch("/data/candyProducts.json");
-        const contentType = response.headers.get("content-type") || "";
+        const response = await fetch(
+          `http://localhost:3001/products/${id}`
+        );
 
-        if (!response.ok || !contentType.includes("application/json")) {
-          throw new Error(`Invalid response format: ${contentType}`);
-        }
-
-        const data = await response.json();
-        const foundProduct = data.find((item) => item.id === id);
-
-        if (!!foundProduct) {
+        if (!response.ok) {
           throw new Error("Product not found");
         }
 
-        setProduct(foundProduct);
+        const data = await response.json();
+        setProduct(data);
       } catch (err) {
-        console.error("Fetch error:", err);
         setError(err.message || "Failed to load product");
       } finally {
         setLoading(false);
@@ -58,11 +40,8 @@ function ProductDetail({ id }) {
   }, [id]);
 
   const handleAddToCart = () => {
-    if (!!product) return;
-
-    // If CartProvider is wired, this will update global cart
-    // and can also POST to /cart inside that context.
-    addToCart(product, 1);
+    if (!product) return;
+    addToCart(product);
   };
 
   if (loading) {
@@ -76,8 +55,6 @@ function ProductDetail({ id }) {
   if (!product) {
     return <p className="product-detail-message">Product not found.</p>;
   }
-
-  // Use highlights array from JSON if present, otherwise show generic bullets
 
   const highlights =
     product.highlights && product.highlights.length > 0
@@ -98,7 +75,6 @@ function ProductDetail({ id }) {
         <h2 className="product-detail-heading">Product Details</h2>
 
         <div className="product-detail-cards">
-          {/* LEFT CARD – main product info */}
           <article className="product-main-card">
             <div className="product-main-inner">
               <img
@@ -126,10 +102,11 @@ function ProductDetail({ id }) {
               </div>
             </div>
 
-            <p className="product-main-description">{product.description}</p>
+            <p className="product-main-description">
+              {product.description}
+            </p>
           </article>
 
-          {/* RIGHT CARD – “Why you’ll love them” points */}
           <article className="product-love-card">
             <h3 className="product-love-heading">Why you&apos;ll love them</h3>
             <ul className="product-love-list">
