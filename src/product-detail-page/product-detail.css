@@ -7,21 +7,6 @@
   min-height: 100vh;
 }
 
-/* top gradient bar */
-.product-detail-header-bar {
-  height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(90deg, #fba4b5 0%, #71c1e2 100%);
-}
-
-.store-title {
-  color: #ffffff;
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-
 /* white inner canvas */
 .product-detail-content {
   background-color: #ffffff;

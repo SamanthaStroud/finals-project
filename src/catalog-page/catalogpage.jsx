@@ -1,6 +1,6 @@
 // Page by Samantha Stroud
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./catalogpage.css";
 import { Button } from "@mantine/core";
 import { Link } from "wouter";
@@ -9,7 +9,7 @@ function Mainpage() {
   const [candyproducts, setCandyProducts] = React.useState([]);
 
   useEffect(() => {
-    fetch("/data/candyProducts.json")
+    fetch("http://localhost:3001/products")
       .then((res) => res.json())
       .then((data) => setCandyProducts(data));
   }, []);
@@ -61,11 +61,11 @@ function Mainpage() {
             <h3>{item.name || "Coming Soon!"}</h3>
             <img
               className="candycardimg"
-              src={item.images}
+              src={item.image}
               alt={item.name || "Candy"}
             />
-            <p>{item.price !== "$" ? item.price : "Price TBD"}</p>
-            <Link href="/products">
+            <p>${Number(item.price).toFixed(2)}/bag</p>
+            <Link href={`/products/${item.id}`}>
               <Button color="pink" radius="lg">
                 View More
               </Button>

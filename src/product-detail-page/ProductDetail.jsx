@@ -67,10 +67,6 @@ function ProductDetail({ id }) {
 
   return (
     <main className="product-detail-page">
-      <section className="product-detail-header-bar">
-        <h1 className="store-title">The Sweet Shoppe</h1>
-      </section>
-
       <section className="product-detail-content">
         <h2 className="product-detail-heading">Product Details</h2>
 
