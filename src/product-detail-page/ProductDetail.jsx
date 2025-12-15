@@ -19,9 +19,7 @@ function ProductDetail({ id }) {
         setLoading(true);
         setError("");
 
-        const response = await fetch(
-          `http://localhost:3001/products/${id}`
-        );
+        const response = await fetch(`/api/products/${id}`);
 
         if (!response.ok) {
           throw new Error("Product not found");
