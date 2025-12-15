@@ -16,7 +16,6 @@ try {
 }
 
 function ProductDetail({ id }) {
-
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -31,13 +30,24 @@ function ProductDetail({ id }) {
         setError("");
 
         // JSON Server endpoint – we can mess with the URL if we need!
-        const response = await fetch(`http://localhost:3000/products`);
-        if (!response.ok) {
+        // ive messed with this section and ive got Product not foudn to show so its now fetching the JSON for you just need to figure out the product found part- Sammie
+        const response = await fetch("/data/candyProducts.json");
+        const contentType = response.headers.get("content-type") || "";
+
+        if (!response.ok || !contentType.includes("application/json")) {
+          throw new Error(`Invalid response format: ${contentType}`);
+        }
+
+        const data = await response.json();
+        const foundProduct = data.find((item) => item.id === id);
+
+        if (!!foundProduct) {
           throw new Error("Product not found");
         }
-        const data = await response.json();
-        setProduct(data);
+
+        setProduct(foundProduct);
       } catch (err) {
+        console.error("Fetch error:", err);
         setError(err.message || "Failed to load product");
       } finally {
         setLoading(false);
@@ -48,7 +58,7 @@ function ProductDetail({ id }) {
   }, [id]);
 
   const handleAddToCart = () => {
-    if (!product) return;
+    if (!!product) return;
 
     // If CartProvider is wired, this will update global cart
     // and can also POST to /cart inside that context.
