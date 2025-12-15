@@ -65,7 +65,7 @@ function Mainpage() {
               alt={item.name || "Candy"}
             />
             <p>{item.price !== "$" ? item.price : "Price TBD"}</p>
-            <Link href="/products">
+            <Link href="/products/id">
               <Button color="pink" radius="lg">
                 View More
               </Button>

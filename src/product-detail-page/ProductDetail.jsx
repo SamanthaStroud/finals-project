@@ -19,9 +19,7 @@ function ProductDetail({ id }) {
         setLoading(true);
         setError("");
 
-        const response = await fetch(
-          `http://localhost:3001/products/${id}`
-        );
+        const response = await fetch(`http://localhost:3001/products/${id}`);
 
         if (!response.ok) {
           throw new Error("Product not found");
@@ -102,9 +100,7 @@ function ProductDetail({ id }) {
               </div>
             </div>
 
-            <p className="product-main-description">
-              {product.description}
-            </p>
+            <p className="product-main-description">{product.description}</p>
           </article>
 
           <article className="product-love-card">
