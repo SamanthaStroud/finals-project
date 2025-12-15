@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Cart.css";
-import { useCart } from "../context/cartContent.jsx";
+import { useCart } from "../components/cartContent.jsx";
 import { useLocation } from "wouter";
 
 export default function Cart({ unsubtotalcb = null, showmoddifier = true }) {

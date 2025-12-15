@@ -3,7 +3,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import { CartProvider } from "./context/cartContent.jsx";
+import { CartProvider } from "./components/cartContent.jsx";
 
 // Mantine
 import { MantineProvider } from "@mantine/core";
