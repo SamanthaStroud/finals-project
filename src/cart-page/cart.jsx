@@ -9,10 +9,12 @@ export default function Cart({ unsubtotalcb = null, showmoddifier = true }) {
   const { cart, increaseQty, decreaseQty } = useCart();
 
   // Calculate subtotal from real cart data
-  const subtotal = cart.reduce(
-    (acc, item) => acc + Number(item.price) * item.qty,
-    0
-  );
+  // Replace the subtotal calculation (around line 11):
+  const subtotal = cart.reduce((acc, item) => {
+    // Remove $ and any other non-numeric characters, then convert to number
+    const cleanPrice = parseFloat(item.price.replace(/[^0-9.]/g, ""));
+    return acc + cleanPrice * item.qty;
+  }, 0);
 
   // Pass subtotal up to checkout if requested (Sammie hook)
   useEffect(() => {
@@ -36,7 +38,11 @@ export default function Cart({ unsubtotalcb = null, showmoddifier = true }) {
             <div key={item.id} className="cart-item-group">
               {/* Item Info */}
               <div className="item-info">
-                <img src={item.image} alt={item.name} className="item-image" />
+                <img
+                  src={item.images}
+                  alt={item.name}
+                  className="item-images"
+                />
                 <p className="item-name">{item.name}</p>
               </div>
 
@@ -63,7 +69,10 @@ export default function Cart({ unsubtotalcb = null, showmoddifier = true }) {
 
               {/* Price */}
               <p className="item-price">
-                ${(Number(item.price) * item.qty).toFixed(2)}
+                $
+                {(
+                  parseFloat(item.price.replace(/[^0-9.]/g, "")) * item.qty
+                ).toFixed(2)}
               </p>
             </div>
           ))
