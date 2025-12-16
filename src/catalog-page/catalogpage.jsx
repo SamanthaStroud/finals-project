@@ -1,6 +1,6 @@
 // Page by Samantha Stroud
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./catalogpage.css";
 import { Button } from "@mantine/core";
 import { Link } from "wouter";
@@ -65,7 +65,7 @@ function Mainpage() {
               alt={item.name || "Candy"}
             />
             <p>{item.price !== "$" ? item.price : "Price TBD"}</p>
-            <Link href="/products/id">
+            <Link href={`/products/${item.id}`}>
               <Button color="pink" radius="lg">
                 View More
               </Button>

@@ -3,7 +3,14 @@
     "id": 1,
     "name": "Gummy Bears",
     "price": "$2.50",
-    "images": "/images/gumybear.jpg"
+    "images": "/images/gumybear.jpg",
+    "description": "Colourful, chewy Gummy Bears bursting with classic fruity flavours, perfect for snacking, parties, and candy buffets.",
+    "highlights": [
+      "Soft, chewy texture with a sweet fruity bite in every bear.",
+      "Assorted flavours like cherry, lemon, orange, apple and pineapple.",
+      "Approx. 40 gummies per 500 g bag.",
+      "Great for movie nights, birthday parties or candy jars."
+    ]
   },
   {
     "id": 2,
