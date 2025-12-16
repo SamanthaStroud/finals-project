@@ -13,6 +13,7 @@ function ProductDetail() {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [addedMessage, setAddedMessage] = useState(""); // NEW
 
   const { addToCart } = useCart();
 
@@ -21,7 +22,9 @@ function ProductDetail() {
       try {
         setLoading(true);
         setError("");
-        const response = await fetch(`/api/data/db.json`);
+
+        // fetch from public/data/candyProducts.json
+        const response = await fetch("/data/candyProducts.json");
 
         if (!response.ok) {
           throw new Error("Failed to load products");
@@ -29,7 +32,7 @@ function ProductDetail() {
 
         // keep the @type! -Sammie
         /** @type {[]}  */
-        const data = (await response.json()).products;
+        const data = await response.json(); // array of products
         const test = data.find((p) => p.id == id);
         setProduct(test);
       } catch (err) {
@@ -45,6 +48,12 @@ function ProductDetail() {
   const handleAddToCart = () => {
     if (!product) return;
     addToCart(product);
+
+    // show quick confirmation
+    setAddedMessage("Added to cart!");
+    setTimeout(() => {
+      setAddedMessage("");
+    }, 1500);
   };
 
   if (loading) {
@@ -93,6 +102,10 @@ function ProductDetail() {
                 >
                   Add to Cart
                 </Button>
+
+                {addedMessage && (
+                  <p className="product-added-message">{addedMessage}</p>
+                )}
               </div>
             </div>
 

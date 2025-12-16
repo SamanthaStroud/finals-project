@@ -125,3 +125,10 @@
     height: auto;
   }
 }
+
+.product-added-message {
+  margin-top: 0.5rem;
+  color: #2f9e44;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
