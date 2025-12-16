@@ -16,66 +16,132 @@
     "id": 2,
     "name": "Sour Worms",
     "price": "$2.50",
-    "images": "/images/sourworms.jpg"
+    "images": "/images/sourworms.jpg",
+    "description": "Tangy, chewy sour gummy worms coated in zesty sugar for the perfect sweet‑and‑sour hit.",
+    "highlights": [
+      "Bright dual‑colour worms with a fun wiggly shape.",
+      "Bold sour coating balanced with a sweet gummy centre.",
+      "Perfect for topping sundaes, cupcakes, or snack bowls."
+    ]
   },
   {
     "id": 3,
     "name": "Peach Rings",
     "price": "$2.50",
-    "images": "/images/peachring.jpg"
+    "images": "/images/peachring.jpg",
+    "description": "Soft, sugary peach‑flavoured gummy rings with a juicy burst in every bite.",
+    "highlights": [
+      "Classic peach candy flavour with a sweet aroma.",
+      "Sugar‑dusted exterior and chewy centre.",
+      "Great for sharing, party favour bags, and candy charcuterie boards."
+    ]
   },
   {
     "id": 4,
     "name": "Rainbow Sours",
     "price": "$2.50",
-    "images": "/images/rainbowbelt.jpg"
+    "images": "/images/rainbowbelt.jpg",
+    "description": "Colourful sour rainbow belts layered with fruity flavours and a tangy sugar coating.",
+    "highlights": [
+      "Striped belts in bright rainbow colours.",
+      "Mix of sweet fruit flavours with a sour kick.",
+      "Fun to twist, tear, and share with friends."
+    ]
   },
   {
     "id": 5,
     "name": "Milk Chocolate",
     "price": "$3.50",
-    "images": "/images/milkchocolate.jpg"
+    "images": "/images/milkchocolate.jpg",
+    "description": "Smooth, creamy milk chocolate that melts in your mouth for a classic sweet treat.",
+    "highlights": [
+      "Rich cocoa flavour with a velvety texture.",
+      "Perfect for snacking, baking, or gifting.",
+      "Pairs well with coffee, tea, or fresh fruit."
+    ]
   },
   {
     "id": 6,
     "name": "M&M's",
     "price": "$2.50",
-    "images": "/images/m&ms.jpg"
+    "images": "/images/m&ms.jpg",
+    "description": "Crunchy candy‑coated milk chocolate pieces in a rainbow of fun colours.",
+    "highlights": [
+      "Colourful shell with a smooth chocolate centre.",
+      "Great for trail mix, baking, or snacking by the handful.",
+      "Perfect for parties, movie nights, and candy bowls."
+    ]
   },
   {
     "id": 7,
     "name": "Chocolate Pretzals",
     "price": "$3.00",
-    "images": "/images/chcopretzel.jpg"
+    "images": "/images/chcopretzel.jpg",
+    "description": "Crispy pretzels dipped in rich chocolate for the perfect sweet‑and‑salty combo.",
+    "highlights": [
+      "Satisfying crunch with a smooth chocolate coating.",
+      "Balanced sweet and salty flavour profile.",
+      "Great for snack boards, gifts, or late‑night cravings."
+    ]
   },
   {
     "id": 8,
     "name": "Caramel",
     "price": "$3.50",
-    "images": "/images/caramel.jpg"
+    "images": "/images/caramel.jpg",
+    "description": "Soft, buttery caramels that deliver a rich, slow‑melting sweetness.",
+    "highlights": [
+      "Creamy, chewy texture with deep caramel flavour.",
+      "Individually sized pieces for easy sharing.",
+      "Perfect with apples, ice cream, or on their own."
+    ]
   },
   {
     "id": 9,
     "name": "Starburst",
     "price": "$3.00",
-    "images": "/images/starburst.jpg"
+    "images": "/images/starburst.jpg",
+    "description": "Juicy, individually wrapped fruit‑chew candies in assorted bold flavours.",
+    "highlights": [
+      "Flavours like strawberry, lemon, orange, and cherry.",
+      "Soft, chewy texture with an intense fruity taste.",
+      "Great for grab‑and‑go snacking and candy dishes."
+    ]
   },
   {
     "id": 10,
     "name": "Skittles",
     "price": "$2.50",
-    "images": "/images/skittles.jpg"
+    "images": "/images/skittles.jpg",
+    "description": "Bite‑sized, colourful candies with a crunchy shell and chewy fruit‑flavoured centre.",
+    "highlights": [
+      "Taste‑the‑rainbow mix of classic Skittles flavours.",
+      "Crisp shell with a satisfying chewy middle.",
+      "Perfect for sharing at parties, games, and movie nights."
+    ]
   },
   {
     "id": 11,
     "name": "Jelly Beans",
     "price": "$2.00",
-    "images": "/images/jellybean.jpg"
+    "images": "/images/jellybean.jpg",
+    "description": "Assorted jelly beans packed with playful fruity flavours in every tiny bite.",
+    "highlights": [
+      "Colourful mix of classic and fun flavours.",
+      "Chewy texture that candy lovers enjoy one bean at a time.",
+      "Ideal for candy jars, Easter baskets, and decorating desserts."
+    ]
   },
   {
     "id": 12,
     "name": "Sweat Hearts",
     "price": "$2.00",
-    "images": "/images/sweetheart.jpg"
+    "images": "/images/sweetheart.jpg",
+    "description": "Pastel candy hearts stamped with sweet messages, perfect for sharing the love.",
+    "highlights": [
+      "Iconic Valentine’s Day candy with fun sayings.",
+      "Crunchy texture with light, nostalgic sweetness.",
+      "Great for decorating cupcakes, cards, and treat bags."
+    ]
   }
 ]

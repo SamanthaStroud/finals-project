@@ -27,6 +27,17 @@ function ProductDetail() {
         console.log(response, id);
 
         if (!response.ok) {
+          throw new Error("Failed to load products");
+        }
+
+        const allProducts = await response.json();
+
+        // Find the one that matches this page's id
+        const found = allProducts.find(
+          (item) => String(item.id) === String(id)
+        );
+
+        if (!found) {
           throw new Error("Product not found");
         }
         // keep the @type! -Sammie
@@ -80,19 +91,14 @@ function ProductDetail() {
           <article className="product-main-card">
             <div className="product-main-inner">
               <img
-                src={product.image}
+                src={product.images} // matches 'images' in candyProducts.json
                 alt={product.name}
                 className="product-main-image"
               />
 
               <div className="product-main-info">
                 <h3 className="product-main-name">{product.name}</h3>
-                <p className="product-main-price">
-                  ${Number(product.price).toFixed(2)}/bag
-                </p>
-                <p className="product-main-stock">
-                  In stock: {product.stock} bags
-                </p>
+                <p className="product-main-price">{product.price}/bag</p>
 
                 <Button
                   className="product-add-button"
