@@ -5,8 +5,11 @@ import React, { useEffect, useState } from "react";
 import "./product-detail.css";
 import { Button } from "@mantine/core";
 import { useCart } from "../components/cartContent.jsx";
+import { useParams } from "wouter";
 
-function ProductDetail({ id }) {
+function ProductDetail() {
+  const { id } = useParams();
+
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -19,14 +22,19 @@ function ProductDetail({ id }) {
         setLoading(true);
         setError("");
 
-        const response = await fetch(`/api/products/${id}`);
+        const response = await fetch(`/api/data/db.json`);
+
+        console.log(response, id);
 
         if (!response.ok) {
           throw new Error("Product not found");
         }
-
-        const data = await response.json();
-        setProduct(data);
+        // keep the @type! -Sammie
+        /** @type {[]}  */
+        const data = (await response.json()).products;
+        const test = data.find((p) => p.id == id);
+        console.log(test);
+        setProduct(test);
       } catch (err) {
         setError(err.message || "Failed to load product");
       } finally {
