@@ -21,30 +21,16 @@ function ProductDetail() {
       try {
         setLoading(true);
         setError("");
-
         const response = await fetch(`/api/data/db.json`);
-
-        console.log(response, id);
 
         if (!response.ok) {
           throw new Error("Failed to load products");
         }
 
-        const allProducts = await response.json();
-
-        // Find the one that matches this page's id
-        const found = allProducts.find(
-          (item) => String(item.id) === String(id)
-        );
-
-        if (!found) {
-          throw new Error("Product not found");
-        }
         // keep the @type! -Sammie
         /** @type {[]}  */
         const data = (await response.json()).products;
         const test = data.find((p) => p.id == id);
-        console.log(test);
         setProduct(test);
       } catch (err) {
         setError(err.message || "Failed to load product");
