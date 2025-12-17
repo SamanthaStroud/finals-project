@@ -4,15 +4,22 @@
 .product-detail-page {
   font-family: "DynaPuff", system-ui, sans-serif;
   background: linear-gradient(90deg, #fba4b5 0%, #71c1e2 100%);
-  min-height: 100vh;
+  /* shrink height a bit so it hugs footer */
+  min-height: calc(100vh - 140px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 0 40px;
 }
 
 /* white inner canvas */
 .product-detail-content {
   background-color: #ffffff;
-  margin: 0 auto;
+  margin: 40px auto 20px; /* less bottom margin */
   max-width: 1200px;
-  padding: 2rem 2.5rem 4rem;
+  padding: 2.5rem 2.5rem 3rem; /* slightly less bottom padding */
+  border-radius: 24px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 }
 
 .product-detail-heading {
@@ -24,8 +31,10 @@
 /* two main cards */
 .product-detail-cards {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.75rem;
   flex-wrap: wrap;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem; /* small so there isn’t a big gap above footer */
 }
 
 /* LEFT CARD – main info */
@@ -114,6 +123,7 @@
 @media (max-width: 768px) {
   .product-detail-content {
     padding: 1.5rem 1.25rem 3rem;
+    margin: 24px 16px 16px;
   }
 
   .product-detail-cards {
