@@ -61,6 +61,7 @@ function Checkout() {
       <div className="checkoutbox">
         <div className="maincheckformbox">
           <div className="infobox">
+            {/* customer info section */}
             <div className="checksecnames">
               <p>Customer Info:</p>
               <div className="inputboxs">
@@ -98,6 +99,7 @@ function Checkout() {
               </div>
             </div>
             <div className="checksecnames">
+              {/* shipping info section */}
               <p>Shipping Address</p>
             </div>
             <div className="inputboxs">
@@ -128,7 +130,7 @@ function Checkout() {
             <div className="checksecnames">
               <p>Payment</p>
             </div>
-
+            {/* payment section */}
             <div className="inputboxs">
               <TextInput
                 pt={"1rem"}
@@ -175,7 +177,7 @@ function Checkout() {
               </div>
               <div className="subtotal">
                 <p>Subtotal</p>
-                <p>{sub}</p>
+                <p>{sub.toFixed(2)}</p>
               </div>
               <hr />
               <div className="shipping">

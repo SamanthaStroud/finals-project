@@ -16,6 +16,7 @@ function Mainpage() {
 
   return (
     <div className="mainpagebox">
+      {/* top section */}
       <div className="topsectionbigbox">
         <div className="topsectionmedbox">
           <div className="topimgbox">
