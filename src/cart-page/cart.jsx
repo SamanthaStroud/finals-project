@@ -1,3 +1,4 @@
+// Page by Brandon Coish
 import React, { useEffect } from "react";
 import "./Cart.css";
 import { useCart } from "../components/cartContent.jsx";
@@ -8,10 +9,8 @@ export default function Cart({ unsubtotalcb = null, showmoddifier = true }) {
 
   const { cart, increaseQty, decreaseQty } = useCart();
 
-  // Calculate subtotal from real cart data
-  // Replace the subtotal calculation (around line 11):
+  // Calculate subtotal from cart data
   const subtotal = cart.reduce((acc, item) => {
-    // Remove $ and any other non-numeric characters, then convert to number
     const cleanPrice = parseFloat(item.price.replace(/[^0-9.]/g, ""));
     return acc + cleanPrice * item.qty;
   }, 0);
